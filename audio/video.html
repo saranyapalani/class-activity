@@ -1,0 +1,61 @@
+<html>
+<head>
+<style>
+body{background-color:pink;}
+</style>
+</head> 
+<body> 
+ <center><h2><i><b>Audio Video player</b></i></h2></center>
+<br>
+<div style="background-img:">
+  
+<audio id="AudioPlayer" height="600" width="400">
+<source src="sonaudio.MP3" type="audio/MP3">
+ </audio><b>
+<iframe src="text.html" height="200" width="400"></iframe></b>
+<h4><b>SONG</b></h4><br>
+
+<button onclick="playAudio()" type="button">Play</button>
+<button onclick="pauseAudio()" type="button">Pause</button> 
+<button onclick="stopAudio()" type="button">Stop</button> 
+</div>
+<script>
+var m = document.getElementById("AudioPlayer"); 
+function playAudio() { 
+    m.play(); 
+} 
+function pauseAudio() { 
+    m.pause(); 
+} 
+function stopAudio(){
+    m.pause();
+    m.currentTime = 0;
+}
+</script>
+
+<div style="background-color:orange">
+  
+<video id="VideoPlayer" width="1500" height="500">
+<source src="video.mp4" type="video/mp4"></video><br<br>
+<h4><b>VIDEO</b></h4><br>
+<button onclick="playVid()" type="button">Play Video</button>
+<button onclick="pauseVid()" type="button">Pause Video</button>
+<button onclick="stopVid()" type="button">Stop Video</button><br> 
+<br>
+</div>
+<script> 
+var vid = document.getElementById("VideoPlayer"); 
+function playVid() { 
+    vid.play(); 
+} 
+function pauseVid() { 
+    vid.pause(); 
+}
+function stopVid() {
+    vid.pause();
+    vid.currentTime=0; 
+}
+</script>
+</body>
+</html>
+
